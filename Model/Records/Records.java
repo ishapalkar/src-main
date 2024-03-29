@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Identification comments:
  *   Name: Soham patil
+ *   Group:10
  *   Experiment No: 02
  *   Experiment Title: Record Class
  *   Experiment Date:15-02-2024
@@ -15,18 +16,26 @@ import java.util.List;
  * Beginning comments:
  * Filename: Records.java
  * @author:  Soham patil
- * Overview: This is the Records class. In this file we have achieved the following
+ * Overview: This is the Records class.
+ * This class represents a set of records related to a client's activities and health metrics.
+ * In this file we have achieved the following
  * - Created Attributes
- * ---     int steps;
+ * ---  int steps;
  * ---  int sleephrs;
  * ---  int hydration;
- * ---   boolean meditation;
+ * ---  boolean meditation;
  *
  * - Created Setters and Getters
  * - Created a Display Function to call the getters and display Instance data
+ * - Implementation of interface methods to
+ * ---  display_records(int client_id);
+ * ---  display_status(int client_id);
+ * ---  delete_records(int client_id);
+ * ---  update_records(int client_id);
  *
  */
 
+ //Records class implementing the RecordsDesc interface, providing methods to interact with and manage records.
 public class Records implements RecordsDesc{
 
     int steps;
@@ -34,6 +43,7 @@ public class Records implements RecordsDesc{
     int hydration;
     boolean meditation;
 
+    // Constructor to initialize the Records object with given values
     public Records(int steps, int sleephrs, int hydration, boolean meditation)
     {
         this.steps = steps;
@@ -42,6 +52,7 @@ public class Records implements RecordsDesc{
         this.meditation = meditation;
     }
 
+    // Setter methods to set values for attributes
     public void setsteps(int steps) {
         this.steps = steps;
     }
@@ -58,6 +69,7 @@ public class Records implements RecordsDesc{
         this.meditation = meditation;
     }
    
+    // Getter methods to retrieve values of attributes
     public int getsteps() {
         return steps;
     }
@@ -73,6 +85,9 @@ public class Records implements RecordsDesc{
     public boolean getmeditation() {
         return meditation;
     }
+
+
+    //Implementation of inteface methods 
     @Override
     public void display_records(int client_id) {
         List<Records> recordsList = new ArrayList<>();
