@@ -27,7 +27,7 @@ import java.util.List;
  *
  * - Created Setters and Getters
  * - Created a Display Function to call the getters and display Instance data
- * - Implementation of interface methods to
+ * - Implementing interface methods to
  * ---  display_records(int client_id);
  * ---  display_status(int client_id);
  * ---  delete_records(int client_id);
@@ -93,14 +93,14 @@ public class Records implements RecordsDesc{
         List<Records> recordsList = new ArrayList<>();
         for (Records record : recordsList) 
 
-        {
-            System.out.println("Steps: " + record.getsteps());
-            System.out.println("Sleep Hours: " + record.getsleephrs());
-            System.out.println("Water Consumed: " + record.gethydration());
-            System.out.println("Meditation: " + record.getmeditation());
-            System.out.println();
+        { 
+                System.out.println("Steps: " + record.getsteps());
+                System.out.println("Sleep Hours: " + record.getsleephrs());
+                System.out.println("Water Consumed: " + record.gethydration());
+                System.out.println("Meditation: " + record.getmeditation());
+                System.out.println();
+            }
         }
-    }
 
     @Override
     public void display_status(int client_id)

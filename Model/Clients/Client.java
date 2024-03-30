@@ -12,7 +12,7 @@ package Model.Clients;
  * Beginning comments:
  * Filename: Client.java
  * @author:  Soham patil
- * Overview: This is the Client class. In this file we have achieved the following
+ * Overview: This is the Client class.In this file we have achieved the following
  * - Created Attributes
  * --- int client_id
  * --- String client_name
@@ -22,6 +22,9 @@ package Model.Clients;
  *
  * - Created Setters and Getters
  * - Created a Display Function to call the getters and display Instance data
+ * - This class extends the Human class 
+ * - to inherit common attributes and behaviors of a human
+ * - Created static variable to keep track of total no of client objects  
  *
  */
 public class Client extends Human {
